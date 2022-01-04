@@ -28,3 +28,10 @@ tester2 = Store.create(name: "test2", annual_revenue: -1, mens_apparel:true, wom
 
 # # Test for carrying mens or womens apparel
 tester3 = Store.create(name: "test3", annual_revenue: 1, mens_apparel:false, womens_apparel: false)
+
+puts "Please enter a store name"
+user_submission = $stdin.gets.chomp.to_i
+
+tester4 = Store.create(name: "#{user_submission}")
+
+puts tester4.errors.full_messages
